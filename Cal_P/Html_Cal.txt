@@ -1,0 +1,36 @@
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="Calculadora.WebForm1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Calculadora en ASP</title>
+    <link href="Style1.css" rel="stylesheet" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <main class="contenedor">
+            <header>
+                <h1>Calculadora ASP</h1>
+            </header>
+
+            <section class="inputs">
+                <asp:TextBox ID="txtNumero1" runat="server" CssClass="input-box" placeholder="Número 1"></asp:TextBox>
+                <asp:TextBox ID="txtNumero2" runat="server" CssClass="input-box" placeholder="Número 2"></asp:TextBox>
+            </section>
+
+            <section class="botones">
+                <asp:Button ID="btnSumar" runat="server" Text="Sumar" OnClick="btnSumar_Click" CssClass="btn" />
+                <asp:Button ID="btnRestar" runat="server" Text="Restar" OnClick="btnRestar_Click" CssClass="btn" />
+                <asp:Button ID="btnMultiplicar" runat="server" Text="Multiplicar" OnClick="btnMultiplicar_Click" CssClass="btn" />
+                <asp:Button ID="btnDividir" runat="server" Text="Dividir" OnClick="btnDividir_Click" CssClass="btn" />
+            </section>
+
+            <footer>
+                <asp:Label ID="lblResultado" runat="server" CssClass="resultado"></asp:Label>
+            </footer>
+        </main>
+    </form>
+</body>
+</html>

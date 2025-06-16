@@ -1,0 +1,60 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+namespace Calculadora
+{
+    public partial class WebForm1 : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+
+        }
+        protected void btnSumar_Click(object sender, EventArgs e)
+        {
+            Calcular((a, b) => a + b);
+        }
+
+        protected void btnRestar_Click(object sender, EventArgs e)
+        {
+            Calcular((a, b) => a - b);
+        }
+
+        protected void btnMultiplicar_Click(object sender, EventArgs e)
+        {
+            Calcular((a, b) => a * b);
+        }
+
+        protected void btnDividir_Click(object sender, EventArgs e)
+        {
+            Calcular((a, b) =>
+            {
+                if (b == 0)
+                {
+                    lblResultado.Text = "Error: División por cero.";
+                    return null;
+                }
+                return a / b;
+            });
+        }
+
+        private void Calcular(Func<double, double, double?> operacion)
+        {
+            double num1, num2;
+
+            if (double.TryParse(txtNumero1.Text, out num1) && double.TryParse(txtNumero2.Text, out num2))
+            {
+                double? resultado = operacion(num1, num2);
+                if (resultado != null)
+                    lblResultado.Text = "Resultado: " + resultado.ToString();
+            }
+            else
+            {
+                lblResultado.Text = "Error: Ingresa valores numéricos válidos.";
+            }
+        }
+    }
+}

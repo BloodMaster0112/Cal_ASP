@@ -1,0 +1,75 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e9ecef; /* Gris neutro */
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.contenedor {
+    background-color: #ffffff; /* Fondo blanco */
+    width: 90%;
+    max-width: 500px;
+    margin: 50px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+}
+
+header h1 {
+    color: #333333; /* Texto principal en gris oscuro */
+    margin-bottom: 20px;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.input-box {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.botones {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #007bff; /* Azul */
+    color: #ffffff;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+    .btn:hover {
+        background-color: #0056b3; /* Azul más oscuro al pasar el mouse */
+    }
+
+footer .resultado {
+    font-size: 18px;
+    font-weight: bold;
+    color: #444; /* Contraste */
+}
+
+    .btn:hover {
+        background-color: #0056b3;
+    }
+
+footer .resultado {
+    font-size: 18px;
+    font-weight: bold;
+    color: #444;
+}
